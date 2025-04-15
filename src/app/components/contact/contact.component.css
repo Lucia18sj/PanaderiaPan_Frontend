@@ -1,0 +1,36 @@
+.title img{
+    width: 100%;
+}
+.title h2{
+    position: absolute;
+    left: 10%;
+    top: 15%;
+}
+.social-media{
+    justify-items: center;
+}
+a{
+    margin: 1rem;
+    text-decoration: none;
+    display: flex;
+    width: 30%;
+}
+a p{
+    font-size: xxx-large;
+    color: var(--title-color);
+}
+a img{
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 400px){
+    .title h2{
+        top: 12%;
+    }
+    a{
+        width: 80%;
+    }
+    a p{
+        font-size: x-large;
+    }
+}

@@ -1,0 +1,66 @@
+.cards{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.card-bread{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px #082327;
+}
+.image-bread img{
+    padding-top: 1rem;
+    width: 100%;
+}
+.icon-info{
+    float: right;
+    padding-right: 2rem;
+}
+
+
+.name-bread {
+    word-wrap: break-word; 
+    white-space: normal; 
+    max-width: 750%; 
+}
+
+.shopping-bread button{
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 1rem;
+    padding: 0 15px 0 15px;
+}
+
+.info-bread .price-bread{
+    font-size: xx-large;
+}
+.info-bread{
+    font-size: x-large;
+    padding: 0rem 1rem 1rem 1rem;
+}
+.card-bread:hover{
+    transform: scale(1.05);
+    transition:ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr );
+    }
+    .card-bread{
+        width: 150px;
+    }
+    .info-bread .price-bread{
+        font-size: large;
+    }
+    .info-bread{
+        font-size: large;
+    }
+    .icon-info{
+        overflow: visible;
+        display: none;
+        visibility: visible;
+    }
+}
