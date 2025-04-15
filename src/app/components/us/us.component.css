@@ -1,0 +1,49 @@
+.us-text img{
+    border-radius: 2rem 0 0 2rem;
+}
+h2{
+    position: absolute;
+    left: 10%;
+    top: 45%;
+}  
+
+.us-text{
+    display: flex;
+    justify-content: end;
+}
+
+.us-text p{
+    width: 50%;
+    padding: 4rem;
+    color: var(--secondary-color);
+    font-size: x-large;
+    text-align: justify;
+}
+p{
+    font-size: xx-large;
+    text-align: center;
+}
+
+@media screen and (max-width: 400px){
+    h2{
+        top: 20%;
+    }
+    .us-text{
+        display: block;
+    }
+
+    .us-text p{
+        font-size: x-small;
+        padding: 0;
+        margin-left: 1rem;
+    }
+    .us-text img{
+        width: 60%;
+    }
+    p{
+        font-size: larger;
+    }
+    .us-img img{
+        width: 100%;
+    }
+}

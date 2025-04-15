@@ -1,0 +1,67 @@
+.card-bread{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px #082327;
+}
+.image-bread img{
+    padding-top: 1rem;
+    width: 100%;
+}
+.icon-info{
+    float: right;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    width: 3rem;
+}
+
+
+.name-bread {
+    word-wrap: break-word; 
+    white-space: normal;  
+}
+
+.shopping-bread button{
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 1rem;
+    padding: 0 15px 0 15px;
+}
+
+.info-bread .price-bread{
+    font-size: xx-large;
+}
+.info-bread{
+    font-size: x-large;
+    padding: 0rem 1rem 1rem 1rem;
+}
+.card-bread:hover{
+    transform: scale(1.05);
+    transition:ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+    .card-bread{
+        width: 150px;
+    }
+    .info-bread .price-bread{
+        font-size: medium;
+    }
+    .info-bread{
+        font-size: large;
+    }
+    .icon-info{
+        overflow: visible;
+        display: none;
+        visibility: visible;
+    }
+    .name-bread{
+        font-size: small;
+    }
+    .shopping-bread button img{
+        width: 60%;
+    }
+    .shopping-bread button{
+        padding: 0 10   px 0 10px;
+    }
+}

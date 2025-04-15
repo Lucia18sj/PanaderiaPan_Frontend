@@ -1,1 +1,87 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family:"LemonMilk";
+    src: url("/assets/font/lemonMilk.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Louis";
+    src: url("/assets/font/louisCaffe.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-family:'Louis', 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--background);
+}
+:root{
+    /* Poner ciertas variables en todos los subdirectorios */
+    --background: #123D44;
+    --background_navBar: #704D31;
+    --primary-color: #5D919C;
+    --secondary-color: #F0DED0;
+
+    --title-color: #C7EAF0;
+    --shadow-color: #B09077;
+}
+.btn-primary{
+    background-color: var(--primary-color);
+    padding: 5px;
+    border-radius: calc(infinity * 1px);
+}
+h2{
+    font-family: "LemonMilk";
+    color: var(--secondary-color);
+    font-size: 15rem;
+}
+h3{
+    font-family: "LemonMilk";
+    color: var(--primary-color);
+    font-size: xx-large;
+}
+h4{
+    font-family: "LemonMilk";
+    color: var(--title-color);
+    font-size: xx-large;
+    justify-self: center;
+    padding: 1rem;
+}
+h5{
+    text-decoration: none;
+    font-size: xxx-large;
+}
+.btn-secondary{
+    font-size: xx-large;
+    font-family: "LemonMilk";
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: calc(infinity * 1px);
+    border: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+p{
+    color: var(--secondary-color);
+    font-size: x-large;
+}
+
+@media screen and (max-width: 400px){
+    h3{
+        font-size: x-large;
+    }
+    h4{
+        font-size: x-large;
+    }
+    .btn-secondary{
+        font-size: x-large;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    h5{
+        font-size: x-large;
+    }
+    img{
+        width: 2rem;
+    }
+}
