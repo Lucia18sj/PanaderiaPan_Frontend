@@ -1,0 +1,100 @@
+
+.superposed-image {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 50%; 
+}
+.carouselExampleAutoplaying {
+    height: 50vh; 
+}
+
+.carousel-item img{
+    height: auto;
+    width: 90%;
+    object-fit: cover;
+}
+
+.destacados{
+    background-color: var(--secondary-color);
+    padding: 20px;
+    margin-bottom: 2rem;
+}
+::ng-deep  .destacados .cards-destacadas app-card-pan .cards {
+    display: flex !important;
+    gap: 2rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+}
+
+::ng-deep  .destacados .cards-destacadas app-card-pan .card-bread {
+    flex: 0 0 auto;
+    width: 250px; 
+    scroll-snap-align: start;
+}
+.donas{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-image: url(/assets/home/donas.png);
+    width: 100%;
+    color: var(--secondary-color);
+    font-size: xx-large;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: xx-large;
+}
+.text-panaderia{
+    color: var(--secondary-color);
+    font-size: xx-large;
+    
+}
+
+.text-panaderia .text-image{
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    font-size: x-large;
+    align-items: center;
+}
+.text-panaderia .text-image img{
+    width: 60%;
+    height: 50%;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .mas-pan{
+        padding: 0%;
+    }
+   
+
+    ::ng-deep  .destacados .cards-destacadas app-card-pan .card-bread {
+        width: 150px; 
+    }
+    .donas img{
+        width: 100%;
+    }
+    .donas{
+        padding: 1rem;
+        font-size: medium;
+    }
+    .text-panaderia{
+        font-size: larger;
+    }
+    .text-panaderia .text-image{
+        display: block;
+        padding: 1rem;
+        font-size: medium;
+    }
+    .text-panaderia .text-image img{
+        width: 100%;
+    }
+}

@@ -1,0 +1,30 @@
+.cards-category{
+    justify-content: center;
+    display: flex;
+    gap: 2rem;
+}
+.card-category{
+    text-decoration: none;
+}
+
+.card-category:hover{
+    scale: calc(1.03);
+}
+p{
+    font-size: xx-large;
+    color: var(--secondary-color);
+    text-align: center;
+}
+@media screen and (max-width: 400px){
+    .cards-category{
+        gap: 5px;
+        padding: 0;
+    }
+
+    .card-category img{
+        width: 75px;
+    }
+    p{
+        font-size: x-small;
+    }
+}
