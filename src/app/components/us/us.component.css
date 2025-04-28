@@ -43,4 +43,7 @@ p{
     p{
         font-size: larger;
     }
+    .us-img img{
+        width: 100%;
+    }
 }

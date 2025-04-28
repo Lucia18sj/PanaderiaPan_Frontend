@@ -43,6 +43,12 @@ h4{
     font-family: "LemonMilk";
     color: var(--title-color);
     font-size: xx-large;
+    justify-self: center;
+    padding: 1rem;
+}
+h5{
+    text-decoration: none;
+    font-size: xxx-large;
 }
 .btn-secondary{
     font-size: xx-large;
@@ -71,5 +77,11 @@ p{
     }
     h2{
         font-size: 3rem;
+    }
+    h5{
+        font-size: x-large;
+    }
+    img{
+        width: 2rem;
     }
 }

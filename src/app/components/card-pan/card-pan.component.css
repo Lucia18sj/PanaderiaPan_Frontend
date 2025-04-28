@@ -1,9 +1,3 @@
-.cards{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 2rem;
-}
-
 .card-bread{
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -16,14 +10,15 @@
 }
 .icon-info{
     float: right;
-    padding-right: 2rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    width: 3rem;
 }
 
 
 .name-bread {
     word-wrap: break-word; 
-    white-space: normal; 
-    max-width: 750%; 
+    white-space: normal;  
 }
 
 .shopping-bread button{
@@ -46,14 +41,11 @@
 }
 
 @media screen and (max-width: 600px) {
-    .cards {
-        grid-template-columns: repeat(2, 1fr );
-    }
     .card-bread{
         width: 150px;
     }
     .info-bread .price-bread{
-        font-size: large;
+        font-size: medium;
     }
     .info-bread{
         font-size: large;
@@ -62,5 +54,14 @@
         overflow: visible;
         display: none;
         visibility: visible;
+    }
+    .name-bread{
+        font-size: small;
+    }
+    .shopping-bread button img{
+        width: 60%;
+    }
+    .shopping-bread button{
+        padding: 0 10   px 0 10px;
     }
 }

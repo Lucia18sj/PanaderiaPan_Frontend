@@ -1,4 +1,11 @@
-
+.mas-productos{
+    padding: 1rem;
+}
+.mas-pan{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+}
 .superposed-image {
     position: absolute;
     top: 50%; 
@@ -22,8 +29,8 @@
     padding: 20px;
     margin-bottom: 2rem;
 }
-::ng-deep  .destacados .cards-destacadas app-card-pan .cards {
-    display: flex !important;
+.destacados .cards-destacadas{
+    display: flex;
     gap: 2rem;
     overflow-x: auto;
     overflow-y: hidden;
@@ -32,7 +39,7 @@
     padding-bottom: 10px;
 }
 
-::ng-deep  .destacados .cards-destacadas app-card-pan .card-bread {
+.destacados .cards-destacadas app-card-pan .card-bread {
     flex: 0 0 auto;
     width: 250px; 
     scroll-snap-align: start;
@@ -48,6 +55,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+}
+.donas p{
     font-size: xx-large;
 }
 .text-panaderia{
@@ -73,17 +83,19 @@
 @media screen and (max-width: 600px) {
     .mas-pan{
         padding: 0%;
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr;
     }
-   
-
     ::ng-deep  .destacados .cards-destacadas app-card-pan .card-bread {
-        width: 150px; 
+        width: 100px; 
     }
     .donas img{
         width: 100%;
     }
     .donas{
         padding: 1rem;
+    }
+    .donas p{
         font-size: medium;
     }
     .text-panaderia{
@@ -96,5 +108,8 @@
     }
     .text-panaderia .text-image img{
         width: 100%;
+    }
+    .destacados .cards-destacadas{
+        gap: 1rem;
     }
 }

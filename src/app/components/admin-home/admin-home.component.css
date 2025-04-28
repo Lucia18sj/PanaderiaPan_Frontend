@@ -43,11 +43,6 @@ a img{
 .menu-text{
     align-items: center;
 }
-.nombre{
-    font-size: x-large;
-    color:var(--secondary-color);
-    text-align: center;
-}
 
 @media screen and (max-width: 600px){
     h4{
@@ -56,11 +51,4 @@ a img{
     p{
         font-size: smaller;
     }
-}input[type="text"]{
-    border: solid 1px var(--primary--color);
-    padding: 10px;
-    border-radius: 8px;
-    margin-right: 4px;
-    display: inline-block;
-    width: 30%;
 }

@@ -43,6 +43,11 @@ a img{
 .menu-text{
     align-items: center;
 }
+.nombre{
+    font-size: x-large;
+    color:var(--secondary-color);
+    text-align: center;
+}
 
 @media screen and (max-width: 600px){
     h4{
