@@ -4,6 +4,7 @@ import { CategoryComponent } from "../category/category.component";
 import { CommonModule } from '@angular/common';
 import { Product } from '../product';
 import { ProductsService } from '../products.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,7 @@ import { ProductsService } from '../products.service';
 })
 export class HomeComponent {
   productService: ProductsService = inject(ProductsService);
-
+  router = inject(Router);
   getAllFeaturedProductsList : Product[] = [];
 
 
@@ -23,5 +24,7 @@ export class HomeComponent {
         this.getAllFeaturedProductsList = getAllFeaturedProductsList;
       }
     );
+    
+
   }
 }

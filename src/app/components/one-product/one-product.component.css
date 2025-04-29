@@ -1,0 +1,26 @@
+.product{
+    font-size: larger;
+    display: grid;
+    gap: 1rem;
+    justify-self: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+}
+input{
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 1rem;
+    padding: 0 15px 0 15px;
+    color: var(--background_navBar);
+}
+.guardar{
+    justify-self: center;
+}
+button{
+    margin: 2rem;
+}

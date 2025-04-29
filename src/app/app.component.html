@@ -11,8 +11,8 @@
         </div>
         <div class="icons col d-flex align-items-center">
           <div class="search align-items-center">
-            <input type="text"/>
-            <img class="btn-primary" src="assets/icons/search.svg"/>
+            <input type="text" [(ngModel)]="searchText" (input)="onSearch()"/>
+            <img class="btn-primary" src="assets/icons/search.svg" (click)="onSearch()"/>
           </div>
           <div class="user d-flex gap-2 align-items-center " >
             <img src="assets/icons/user.svg"/>

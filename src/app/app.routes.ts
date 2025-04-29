@@ -6,6 +6,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { InventoryComponent } from './components/inventory/inventory.component';
+import { OneProductComponent } from './components/one-product/one-product.component';
 
 export const routes: Routes = [
     {
@@ -41,6 +42,12 @@ export const routes: Routes = [
     {
         path:"inventory",
         component: InventoryComponent,
-        title:"Administrator"
+        title:"Inventory"
+    },
+    {
+        path:"product",
+        component: OneProductComponent,
+        title:"Product"
     }
+    
 ];

@@ -1,0 +1,31 @@
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+table{
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    width: 80%;
+    justify-self: center;
+    margin-bottom: 1rem;
+}
+thead{
+    font-size: larger;
+    text-align: center;
+    border-bottom: 1rem solid var(--background);
+}
+th{
+    border-top: 0.1rem solid var(--shadow-color);
+    border-right: 0.1rem solid var(--shadow-color);
+}
+tbody tr:hover{
+    background-color: var(--shadow-color);
+    color: var(--secondary-color);
+}
+td{
+    border-top: 0.1rem solid var(--shadow-color);
+    padding: 0.5rem;
+}

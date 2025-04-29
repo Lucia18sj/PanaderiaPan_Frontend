@@ -1,7 +1,10 @@
 <section class="card-bread">
     <div>
         <figure class="image-bread"><img [src]="product.image_url"/></figure>
-        <img class="icon-info" src="/assets/card-bread/info.svg"/>
+        <div class="tooltip-container">
+            <img class="icon-info" src="/assets/card-bread/info.svg"/>
+            <span class="tooltip-text">{{product.description}}</span>
+        </div>
     </div>
     <div class="info-bread">
         <p class="price-bread">${{product.price}}</p>

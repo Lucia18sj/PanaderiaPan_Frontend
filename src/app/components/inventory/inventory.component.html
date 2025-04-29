@@ -1,4 +1,37 @@
 <h4>Inventario</h4>
+<div class="search">
+    <input type="text" class="search-input" placeholder="Buscar producto" aria-label="Search" aria-describedby="search-addon" />
+    <button class="btn-primary"><img src="/assets/icons/search.svg" alt=""></button>
+</div>
+<button class="btn-primary ms-5"  routerLink="/product">Nuevo Pan</button>
 <div class="products">
-    
+    <table>
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Descripción</th>
+                <th>Stock</th>
+                <th>Stock Minimo</th>
+                <th>Categoría</th>
+                <th>Activo</th>
+                <th><i class="bi bi-trash"></i></th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- routerLink="/product/{{product.id_product}}" -->
+            <tr *ngFor="let product of getAllProducts" routerLink="/product/{{product.id_product}}">
+                <td> {{product.product}} </td>
+                <td>{{product.price}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.stock}}</td>
+                <td>{{product.stock_min}}</td>
+                <td>{{product.category}}</td>
+                <td>{{product.is_active}}</td>
+                <td>
+                    <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>

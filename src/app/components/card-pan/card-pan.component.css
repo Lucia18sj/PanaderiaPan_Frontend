@@ -8,7 +8,7 @@
     padding-top: 1rem;
     width: 100%;
 }
-.icon-info{
+.tooltip-container .icon-info{
     float: right;
     padding-right: 1rem;
     padding-bottom: 1rem;
@@ -39,6 +39,37 @@
     transform: scale(1.05);
     transition:ease-in-out;
 }
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip-text {
+    visibility: hidden;
+    width: 200px; /* Puedes ajustar el tamaño */
+    background-color: var(--secondary-color);
+    color: var(--background_navBar);
+    text-align: center;
+    padding: 5px;
+    border-radius: 8px;
+  
+    /* Posición */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Arriba del icono */
+    left: 50%;
+    transform: translateX(-50%);
+  
+    /* Animación suave */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+  
 
 @media screen and (max-width: 600px) {
     .card-bread{

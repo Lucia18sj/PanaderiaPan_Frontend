@@ -1,47 +1,50 @@
-import { Component, inject, OnInit, OnDestroy } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CardPanComponent } from "../card-pan/card-pan.component";
 import { CategoryComponent } from "../category/category.component";
 import { ProductsService } from '../products.service';
 import { Product } from '../product';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { Subscription } from 'rxjs';
-
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-products',
   imports: [CardPanComponent, CategoryComponent, CommonModule, RouterModule],
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent implements OnInit, OnDestroy {
-  private routeSub: Subscription | undefined;
+export class ProductsComponent {
+
   products: Product[] = [];
-  category: string = '';
+  filterProducts: Product[] = [];
+  productsService = inject(ProductsService);
+  route = inject(ActivatedRoute);
 
-  constructor(
-    private route: ActivatedRoute,
-    private productService: ProductsService
-  ) {}
-
+  constructor(){
+    this.productsService.getAllProducts().then(
+      (products:Product[]) =>{
+        this.products = products;
+        this.filterProducts = products;
+      }
+    )
+  }
   ngOnInit() {
-    // Subscripción a los parámetros de la ruta para detectar el cambio de categoría
-    this.routeSub = this.route.params.subscribe((params) => {
-      this.category = params['category']; // Obtener la categoría de la URL
-      console.log(`Category: ${this.category}`);
-      this.fetchProductsForCategory(this.category); // Llamar al servicio para obtener los productos
+    this.route.params.subscribe(params => {
+      const category = params['category'];
+      this.filterByCategory(category);
     });
   }
-
-  ngOnDestroy() {
-    if (this.routeSub) {
-      this.routeSub.unsubscribe(); // Desuscribirse para evitar fugas de memoria
+  filterByCategory(categoryOrName: string) {
+    if (!categoryOrName || categoryOrName.toLowerCase() === 'all') {
+      this.filterProducts = this.products;
+      return;
     }
+  
+    const text = categoryOrName.toLowerCase();
+  
+    this.filterProducts = this.products.filter((product) =>
+      product.category.toLowerCase() === text ||
+      product.product.toLowerCase().includes(text)
+    );
   }
-
-  fetchProductsForCategory(category: string) {
-    this.productService.getProductsForCategory(category).then((products) => {
-      this.products = products;
-      console.log('Fetched products:', products);
-    });
-  }
+  
 }
