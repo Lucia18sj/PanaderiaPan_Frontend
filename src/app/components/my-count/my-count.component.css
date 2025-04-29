@@ -1,0 +1,59 @@
+a{
+    text-decoration: none;
+    color: var(--background);
+}
+
+.menu{
+    display: grid;
+    width: 80%;
+    justify-self: center;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin: 1rem;
+    gap: 1rem;
+
+}
+.menu p{
+    color: black;
+}
+a{
+    justify-self: center;
+    width: 95%;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    align-items: center;
+    background-color: var(--secondary-color);
+    
+}
+a:hover{
+    transform: scale(1.02);
+    transition:ease-in-out;
+    box-shadow: 1px 1px 10px var(--background_navBar);
+}
+a img{
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    justify-self: center;
+}
+.menu-text{
+    align-items: center;
+}
+.nombre{
+    font-size: x-large;
+    color:var(--secondary-color);
+    text-align: center;
+}
+
+@media screen and (max-width: 600px){
+    h4{
+        font-size: xx-large;
+    }
+    p{
+        font-size: smaller;
+    }
+}
