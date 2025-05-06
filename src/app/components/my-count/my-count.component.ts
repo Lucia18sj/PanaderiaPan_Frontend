@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterModule, RouterOutlet, Router } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { AuthService } from '../../auth.service';
 
 
 @Component({
   selector: 'app-my-count',
-  imports: [RouterModule, RouterOutlet,],
+  imports: [RouterModule],
   templateUrl: './my-count.component.html',
   styleUrl: './my-count.component.css'
 })

@@ -11,6 +11,13 @@ label{
     margin-bottom: 5px;
     color: var(--secondary-color);
 }
+textarea{
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 1rem;
+    padding: 0 15px 0 15px;
+    color: var(--background_navBar);
+}
 input{
     background-color: var(--secondary-color);
     border: none;
@@ -23,4 +30,10 @@ input{
 }
 button{
     margin: 2rem;
+}
+.is_active{
+    padding: 1rem;
+}
+.save{
+    justify-self: center    ;
 }

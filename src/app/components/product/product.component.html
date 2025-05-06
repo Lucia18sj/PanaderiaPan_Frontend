@@ -1,0 +1,46 @@
+<h4>Product</h4>
+<div class="product" *ngIf="product">
+
+  <div class="input-grupo">
+    <label>Producto</label>
+    <input type="text" [(ngModel)]="product.product" />
+  </div>
+
+  <div class="input-grupo">
+    <label>Precio</label>
+    <input type="number" [(ngModel)]="product.price" />
+  </div>
+
+  <div class="input-grupo">
+    <label>Stock</label>
+    <input type="number" [(ngModel)]="product.stock" />
+  </div>
+
+  <div class="input-grupo">
+    <label>Stock Mínimo</label>
+    <input type="number" [(ngModel)]="product.stock_min" />
+  </div>
+
+  <div class="input-grupo">
+    <label>Categoría</label>
+    <input type="text" [(ngModel)]="product.category" />
+  </div>
+
+  <div class="input-grupo">
+    <label>Descripción</label>
+    <textarea [(ngModel)]="product.description"></textarea>
+  </div>
+
+  <div class="input-grupo">
+    <label>Imagen</label>
+    <input type="text" [(ngModel)]="product.image_url" />
+  </div>
+
+  <div class="input-grupo">
+    <label>¿El producto está activo?</label>
+    <input type="checkbox" [(ngModel)]="product.is_active" />
+  </div>
+</div>
+<div class="save">
+  <button class="btn-primary" (click)="saveProduct()">Guardar</button>
+</div>

@@ -10,7 +10,7 @@ import { MyCountComponent } from './components/my-count/my-count.component';
 import { AccountDetailComponent } from './components/account-detail/account-detail.component';
 import { PurchasesComponent } from './components/purchases/purchases.component';
 import { AddressComponent } from './components/address/address.component';
-import { OneProductComponent } from './components/one-product/one-product.component';
+import { ProductComponent } from './components/product/product.component';
 
 export const routes: Routes = [
     {
@@ -67,5 +67,16 @@ export const routes: Routes = [
         path:"address",
         component: AddressComponent,
         title:"Address"
+    },
+    {
+        path:"product",
+        component: ProductComponent,
+        title:"Product"
+    },
+    {
+        path:"product/:id",
+        component: ProductComponent,
+        title:"Product"
     }
+
 ];

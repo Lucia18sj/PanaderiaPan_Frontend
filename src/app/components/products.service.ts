@@ -6,8 +6,9 @@ import { Product } from './product';
 })
 export class ProductsService {
   url = 'http://localhost:3000/api/products';
+  
   constructor() { }
-
+  
   async getAllFeaturedProducts(): Promise<Product[]>{
     const data = await fetch(`${this.url}/getAllFeaturedProducts`);
     console.log(data);
@@ -19,30 +20,35 @@ export class ProductsService {
     return productsData[0] ?? [];
   }
 
-  async getProductById(id: number): Promise<Product> {
-    const data = await fetch(`${this.url}/getProduct/${id}`);
+  async getProductById(id: number): Promise<Product | null> {
+    const data = await fetch(`${this.url}/getProductById/${id}`);
     const productData = await data.json();
-    return productData[0] ?? null;
+    console.log('Service result:', productData);
+    return productData ?? null; 
   }
   
-  async insertProduct(product: Product): Promise<void> {
-    await fetch(`${this.url}/insertProduct`, {
+  async createProduct(product: Product): Promise<any> {
+    const response = await fetch(`${this.url}/insertProduct`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(product)
     });
+  
+    return await response.json();
   }
   
-  async updateProduct(product: Product): Promise<void> {
-    await fetch(`${this.url}/updateProduct/${product.id_product}`, {
+  async updateProduct(product: Product, id: number): Promise<any> {
+    const response = await fetch(`${this.url}/updateProduct/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(product)
     });
+  
+    return await response.json();
   }
   
   
