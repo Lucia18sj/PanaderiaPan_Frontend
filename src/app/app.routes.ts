@@ -3,6 +3,8 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 import { UsComponent } from './components/us/us.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { InventoryComponent } from './components/inventory/inventory.component';
@@ -11,6 +13,7 @@ import { AccountDetailComponent } from './components/account-detail/account-deta
 import { PurchasesComponent } from './components/purchases/purchases.component';
 import { AddressComponent } from './components/address/address.component';
 import { ProductComponent } from './components/product/product.component';
+
 
 export const routes: Routes = [
     {
@@ -49,12 +52,12 @@ export const routes: Routes = [
         title:"Administrator"
     },
     {
-        path:"mycount",
+        path:"mycount/:id_customer",
         component: MyCountComponent,
         title:"My Account"
     },
     {
-        path:"accountdetail",
+        path:"accountdetail/:id_customer",
         component: AccountDetailComponent,
         title:"Detail Account"
     },
@@ -64,7 +67,7 @@ export const routes: Routes = [
         title:"Purchases"
     },
     {
-        path:"address",
+        path:"address/:id_customer",
         component: AddressComponent,
         title:"Address"
     },
@@ -74,9 +77,18 @@ export const routes: Routes = [
         title:"Product"
     },
     {
-        path:"product/:id",
+        path:"product/:id_product",
         component: ProductComponent,
         title:"Product"
+    },
+    {
+        path:"login",
+        component: LoginComponent,
+        title:"Login"
+    },
+    {
+        path:"register",
+        component:RegisterComponent,
+        title:"Register"
     }
-
 ];

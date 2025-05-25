@@ -2,7 +2,10 @@ a{
     text-decoration: none;
     color: var(--background);
 }
-
+a i{
+    fill: var(--primary-color);
+    font-size: 3rem;
+}
 .menu{
     display: grid;
     width: 80%;

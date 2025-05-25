@@ -14,10 +14,10 @@
             <input type="text" [(ngModel)]="searchText" (input)="onSearch()"/>
             <img class="btn-primary" src="assets/icons/search.svg" (click)="onSearch()"/>
           </div>
-          <div class="user d-flex gap-2 align-items-center " >
+          <div class="user d-flex gap-2 align-items-center" (click)="goToAccount()">
             <img src="assets/icons/user.svg"/>
-            <p>¡Hola Invitado!</p>
-          </div>
+            <p>{{ user ? '¡Hola ' + user.name + '!' : '¡Hola Invitado!' }}</p>
+          </div>          
           <img src="assets/icons/cart3.svg"/>
           <button type="button">
             <img src="assets/icons/list.svg">

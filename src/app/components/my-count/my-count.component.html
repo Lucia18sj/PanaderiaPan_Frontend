@@ -1,11 +1,11 @@
 <h4>Mi cuenta</h4>
 <section>
     <div class="nombre">
-        <h5>nombre completo</h5>
-        <p>Correo</p>
+        <h5>{{user?.name + ' ' + user?.lastname}}</h5>
+        <p>{{user?.email}}</p>
     </div>
     <div class="menu">    
-        <a routerLink="/accountdetail"> 
+        <a routerLink="/accountdetail/{{user?.id_customer}}"> 
             <img src="/assets/icons/person-fill-gear.svg" alt="">
             <div class="menu-text">
                 <h5>Detalles de cuenta</h5>
@@ -21,7 +21,7 @@
             </div>
             <img src="/assets/icons/arrow.svg" alt="">
         </a>
-        <a routerLink="/address">
+        <a routerLink="/address/{{user?.id_customer}}">
             <img src="/assets/icons/house-fill.svg" alt="">
             <div class="menu-text">
                 <h5>Direcciones</h5>
@@ -32,3 +32,7 @@
 
     </div>
 </section>
+
+<div class="logout">
+    <button class="btn btn-danger" (click)="logout()"><i class="bi bi-box-arrow-right"></i> Cerrar Sesion</button>
+</div>

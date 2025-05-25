@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-admin-home',
@@ -9,4 +10,10 @@ import { RouterModule } from '@angular/router';
 })
 export class AdminHomeComponent {
 
+  constructor(private router: Router,private userService: UserService) {}
+  
+  logout() {
+    this.userService.logout();
+    this.router.navigate(['/']);
+  }
 }

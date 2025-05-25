@@ -28,9 +28,9 @@ export class ProductComponent {
     category: ''
   };
   isEditMode = false;
-  
+
   constructor(){
-    const id = this.route.snapshot.params['id'];
+    const id = this.route.snapshot.params['id_product'];
     if (id && !isNaN(+id)) {
       this.isEditMode = true;
       this.productService.getProductById(+id).then((p) => {
@@ -41,7 +41,7 @@ export class ProductComponent {
   
   }
   async saveProduct() {
-    const id = this.route.snapshot.params['id'];
+    const id = this.route.snapshot.params['id_product'];
     if (this.isEditMode) {
       await this.productService.updateProduct(this.product, +id);
       alert('Producto actualizado exitosamente');

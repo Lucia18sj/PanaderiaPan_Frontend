@@ -1,7 +1,8 @@
+
 import { Component, OnInit } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
-import { AuthService } from '../../auth.service';
-
+import { UserService } from '../user.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-my-count',
@@ -10,30 +11,25 @@ import { AuthService } from '../../auth.service';
   styleUrl: './my-count.component.css'
 })
 export class MyCountComponent implements OnInit {
-  isLoggedIn: boolean = false;
-  userName: string | null = null;
+  user: User | null = null;
+  constructor(private router: Router,private userService: UserService) {}
 
-  constructor(
-    private router: Router,
-    private authService: AuthService
-  ) {}
-
- 
-  ngOnInit() {
-    this.authService.isLoggedIn().subscribe(status => {
-      this.isLoggedIn = status;
-    });
-
-    this.authService.getCurrentUserName().subscribe(name => {
-      this.userName = name;
-    });
+  ngOnInit(): void {
+    this.getUser();
   }
 
-  onPerfilClick() {
-    if (this.isLoggedIn) {
-      this.router.navigate(['/configuracion-cuenta']);
-    } else {
-      this.router.navigate(['/inicio-sesion']);
-    }
+  getUser() {
+    this.userService.getCurrentUser().then((user) => {
+      this.user = user;
+      console.log('Usuario actual:', this.user);
+    });
   }
+  
+  logout() {
+    this.userService.logout();
+    this.router.navigate(['/']);
+  }
+  
+
+  
 }

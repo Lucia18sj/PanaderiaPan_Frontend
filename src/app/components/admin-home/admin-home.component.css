@@ -42,6 +42,9 @@ a img{
 }
 .menu-text{
     align-items: center;
+}.logout{
+    justify-self: center;
+    margin: 1rem;
 }
 
 @media screen and (max-width: 600px){
