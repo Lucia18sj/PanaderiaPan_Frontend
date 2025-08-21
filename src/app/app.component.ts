@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { RouterOutlet, RouterModule, Router } from '@angular/router';
 import { FormsModule, NgModel } from '@angular/forms';
-import { UserService } from './components/user.service'; // Asegúrate de que el servicio esté importado
+import { UserService } from './components/user.service';
 import { User } from './components/user';
 import { Subscription } from 'rxjs';
 
